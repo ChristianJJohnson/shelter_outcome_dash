@@ -76,8 +76,22 @@ column1 = dbc.Col(
                 which was a gradient boosting model. I used XGBoost's library a XGBClassifier model, it predicted my 
                 target with an accuracy of about 76% an almost 29% gain over the baseline model.
                 
+                `XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+                colsample_bynode=1, colsample_bytree=1, gamma=0,
+                learning_rate=0.25, max_delta_step=0, max_depth=4,
+                min_child_weight=1, missing=None, n_estimators=1000, n_jobs=-1,
+                nthread=None, objective='multi:softprob', random_state=0,
+                reg_alpha=0, reg_lambda=1, scale_pos_weight=1, seed=None,
+                silent=None, subsample=1, verbosity=1)`
+                
+            
+                Below are the permutation importances are the features. It confirmed my thought of how much of a 
+                role age plays in a animals outcome. 
             '''
         ),
+        html.Img(src='../assets/eli5.png', width="225", height="475"),
+        html.Img(src='../assets/OutcomeAge.png', width="320", height="300"),
+        html.Img(src='../assets/Shap Sum.png', width="310", height="320"),
 
     ],
 )
